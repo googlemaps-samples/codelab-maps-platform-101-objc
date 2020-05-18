@@ -1,0 +1,7 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'SolutionApp' do
+    use_frameworks!
+  pod 'GoogleMaps'
+  pod 'Google-Maps-iOS-Utils'
+end
