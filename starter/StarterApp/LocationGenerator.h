@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 #import <Foundation/Foundation.h>
-#import <CoreLocation/CoreLocation.h>
+@import CoreLocation;
+
 @interface LocationGenerator : NSObject
 + (CLLocationCoordinate2D) generateLocationNearLatitude:(double)latitude longitude:(double)longitude;
 @end

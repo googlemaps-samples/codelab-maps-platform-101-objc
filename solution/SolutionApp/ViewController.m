@@ -15,8 +15,8 @@
  */
 
 #import "ViewController.h"
-#import <GoogleMaps/GoogleMaps.h>
 #import "LocationGenerator.h"
+@import GoogleMaps;
 @import GoogleMapsUtils;
 
 @interface ViewController ()<GMUClusterManagerDelegate, GMSMapViewDelegate>
@@ -63,14 +63,14 @@
 // Randomly generates cluster items within some extent of the camera and
 // adds them to the cluster manager.
 - (void)generateClusterItems {
-  const int kClusterItemCount = 100;
-  const double kCameraLatitude = -33.8;
-  const double kCameraLongitude = 151.2;
+  const int clusterItemCount = 100;
+  const CLLocationDegrees cameraLatitude = -33.8;
+  const CLLocationDegrees cameraLongitude = 151.2;
   
   NSMutableArray *array = [[NSMutableArray alloc] init];
   
-  for (int index = 1; index <= kClusterItemCount; ++index) {
-    CLLocationCoordinate2D location = [LocationGenerator generateLocationNearLatitude:kCameraLatitude longitude:kCameraLongitude];
+  for (int index = 1; index <= clusterItemCount; ++index) {
+    CLLocationCoordinate2D location = [LocationGenerator generateLocationNearLatitude:cameraLatitude longitude:cameraLongitude];
     
     GMSMarker *marker = [GMSMarker markerWithPosition:location];
     marker.title = @"test";

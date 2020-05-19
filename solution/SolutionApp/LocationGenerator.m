@@ -16,12 +16,12 @@
 #import "LocationGenerator.h"
 
 @implementation LocationGenerator
-+ (CLLocationCoordinate2D)generateLocationNearLatitude:(double)latitude longitude:(double)longitude {
-  const double extent = 0.1;
-  double lat = latitude + extent * [self randomScale];
-  double lng = longitude + extent * [self randomScale];
-  CLLocationCoordinate2D location = CLLocationCoordinate2DMake(lat, lng);
-  return location;
++ (CLLocationCoordinate2D)generateLocationNearLatitude:(CLLocationDegrees)latitude
+                                             longitude:(CLLocationDegrees)longitude {
+  const CLLocationDegrees extent = 0.1;
+  const CLLocationDegrees lat = latitude + extent * [self randomScale];
+  const CLLocationDegrees lng = longitude + extent * [self randomScale];
+  return CLLocationCoordinate2DMake(lat, lng);
 }
 
 // Returns a random value between -1.0 and 1.0.
