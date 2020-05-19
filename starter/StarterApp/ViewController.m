@@ -15,6 +15,7 @@
  */
 
 #import "ViewController.h"
+#import "LocationGenerator.h"
 
 @interface ViewController ()
 @end
