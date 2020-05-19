@@ -28,12 +28,10 @@
 		02F87BD51D1CC2D300C65016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02F87BD81D1CC2D300C65016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02F87BDA1D1CC2D300C65016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2941A5C2F1E4B9380F973F1E /* Pods-ObjCDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjCDemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjCDemoApp/Pods-ObjCDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		543C4FC0247352DC00821017 /* LocationGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationGenerator.m; sourceTree = "<group>"; };
 		543C4FC1247352DC00821017 /* LocationGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationGenerator.h; sourceTree = "<group>"; };
 		800104BEB908541BC0446AB7 /* Pods_SolutionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SolutionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AD75AAA52ACDCC2027431F /* Pods-SolutionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SolutionApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SolutionApp/Pods-SolutionApp.release.xcconfig"; sourceTree = "<group>"; };
-		B5525BFDB3FCF79A77C18676 /* Pods-ObjCDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjCDemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjCDemoApp/Pods-ObjCDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		B7B1EA515E65F0E0C6E7682E /* Pods-SolutionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SolutionApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SolutionApp/Pods-SolutionApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,8 +102,6 @@
 		9027F72B5535D27237A9A4A1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2941A5C2F1E4B9380F973F1E /* Pods-ObjCDemoApp.debug.xcconfig */,
-				B5525BFDB3FCF79A77C18676 /* Pods-ObjCDemoApp.release.xcconfig */,
 				B7B1EA515E65F0E0C6E7682E /* Pods-SolutionApp.debug.xcconfig */,
 				A5AD75AAA52ACDCC2027431F /* Pods-SolutionApp.release.xcconfig */,
 			);
