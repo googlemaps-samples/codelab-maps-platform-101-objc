@@ -16,7 +16,6 @@
 #import "LocationGenerator.h"
 
 @implementation LocationGenerator
-
 +(NSArray<GMSMarker *> *)generateMarkersNear:(CLLocationCoordinate2D)location count:(int)count {
   NSMutableArray *markerArray = [[NSMutableArray alloc] init];
   for (int index = 1; index <= count; ++index) {

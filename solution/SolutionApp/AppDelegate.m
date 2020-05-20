@@ -17,13 +17,13 @@
 
 @import GoogleMaps;
 
-static NSString *const kMapsAPIKey = @"YOUR API KEY";
+static NSString *const MapsAPIKey = @"YOUR API KEY";
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  [GMSServices provideAPIKey:kMapsAPIKey];
+  [GMSServices provideAPIKey:MapsAPIKey];
   return YES;
 }
 
