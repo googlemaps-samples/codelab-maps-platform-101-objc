@@ -15,6 +15,7 @@
  */
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import <GoogleMaps/GoogleMaps.h>
 @interface LocationGenerator : NSObject
-+ (CLLocationCoordinate2D) generateLocationNearLatitude:(double)latitude longitude:(double)longitude;
++ (NSArray<GMSMarker *> *) generateMarkersNear:(CLLocationCoordinate2D)location count:(int)count;
 @end

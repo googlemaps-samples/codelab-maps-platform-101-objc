@@ -15,11 +15,11 @@
  */
 
 #import "ViewController.h"
-#import <GoogleMaps/GoogleMaps.h>
 #import "LocationGenerator.h"
+#import <GoogleMaps/GoogleMaps.h>
 @import GoogleMapsUtils;
 
-@interface ViewController ()<GMUClusterManagerDelegate, GMSMapViewDelegate>
+@interface ViewController ()<GMSMapViewDelegate, GMUClusterManagerDelegate>
 @end
 
 @implementation ViewController {
@@ -32,52 +32,35 @@
   // Load the map at set latitude/longitude and zoom level
   GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86 longitude:151.20 zoom:12];
   _mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-  _mapView.myLocationEnabled = YES;
-  _mapView.delegate = self;
   self.view = _mapView;
+  _mapView.delegate = self;
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  // Add a single marker with a custom icon
+  CLLocationCoordinate2D mapCenter = CLLocationCoordinate2DMake(-33.86, 151.20);
+  GMSMarker *marker = [GMSMarker markerWithPosition:mapCenter];
+  marker.icon = [UIImage imageNamed:@"custom_pin.png"];
+  
   // Set up the cluster manager with a supplied icon generator and renderer.
   id<GMUClusterAlgorithm> algorithm =
   [[GMUNonHierarchicalDistanceBasedAlgorithm alloc] init];
-  id<GMUClusterIconGenerator> iconGenerator =
+  id<GMUClusterIconGenerator> clusterIconGenerator =
   [[GMUDefaultClusterIconGenerator alloc] init];
   id<GMUClusterRenderer> renderer =
   [[GMUDefaultClusterRenderer alloc] initWithMapView:_mapView
-                                clusterIconGenerator:iconGenerator];
-  _clusterManager =
-  [[GMUClusterManager alloc] initWithMap:_mapView
-                               algorithm:algorithm
-                                renderer:renderer];
+                                clusterIconGenerator:clusterIconGenerator];
+  _clusterManager = [[GMUClusterManager alloc] initWithMap:_mapView
+                                                 algorithm:algorithm
+                                                  renderer:renderer];
   
   // Generate and add random items to the cluster manager.
-  [self generateClusterItems];
-  //  [_clusterManager setDelegate:self mapDelegate:self];
+  NSArray<GMSMarker *> *markerArray = [LocationGenerator generateMarkersNear:mapCenter count:100];
+  [_clusterManager addItems:markerArray];
   // Render clusters from items on the map
   [_clusterManager cluster];
-}
-
-// Randomly generates cluster items within some extent of the camera and
-// adds them to the cluster manager.
-- (void)generateClusterItems {
-  const int kClusterItemCount = 100;
-  const double kCameraLatitude = -33.8;
-  const double kCameraLongitude = 151.2;
-  
-  NSMutableArray *array = [[NSMutableArray alloc] init];
-  
-  for (int index = 1; index <= kClusterItemCount; ++index) {
-    CLLocationCoordinate2D location = [LocationGenerator generateLocationNearLatitude:kCameraLatitude longitude:kCameraLongitude];
-    
-    GMSMarker *marker = [GMSMarker markerWithPosition:location];
-    marker.title = @"test";
-    marker.snippet = @"snippet";
-    [array addObject:marker];
-    [_clusterManager addItem:marker];
-  }
 }
 
 - (BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker {

@@ -14,6 +14,7 @@
 		02F87BD61D1CC2D300C65016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F87BD51D1CC2D300C65016 /* Assets.xcassets */; };
 		02F87BD91D1CC2D300C65016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F87BD71D1CC2D300C65016 /* LaunchScreen.storyboard */; };
 		543C4FC2247352DC00821017 /* LocationGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C4FC0247352DC00821017 /* LocationGenerator.m */; };
+		543C4FC52474B9A100821017 /* custom_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 543C4FC42474B9A100821017 /* custom_pin.png */; };
 		74EB9D117494803A22094E40 /* Pods_SolutionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 800104BEB908541BC0446AB7 /* Pods_SolutionApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		02F87BDA1D1CC2D300C65016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		543C4FC0247352DC00821017 /* LocationGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationGenerator.m; sourceTree = "<group>"; };
 		543C4FC1247352DC00821017 /* LocationGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationGenerator.h; sourceTree = "<group>"; };
+		543C4FC42474B9A100821017 /* custom_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custom_pin.png; sourceTree = "<group>"; };
 		800104BEB908541BC0446AB7 /* Pods_SolutionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SolutionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AD75AAA52ACDCC2027431F /* Pods-SolutionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SolutionApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SolutionApp/Pods-SolutionApp.release.xcconfig"; sourceTree = "<group>"; };
 		B7B1EA515E65F0E0C6E7682E /* Pods-SolutionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SolutionApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SolutionApp/Pods-SolutionApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				543C4FC0247352DC00821017 /* LocationGenerator.m */,
 				02F87BCF1D1CC2D300C65016 /* ViewController.h */,
 				02F87BD01D1CC2D300C65016 /* ViewController.m */,
+				543C4FC42474B9A100821017 /* custom_pin.png */,
 				02F87BD21D1CC2D300C65016 /* Main.storyboard */,
 				02F87BD51D1CC2D300C65016 /* Assets.xcassets */,
 				02F87BD71D1CC2D300C65016 /* LaunchScreen.storyboard */,
@@ -170,6 +173,7 @@
 			files = (
 				02F87BD91D1CC2D300C65016 /* LaunchScreen.storyboard in Resources */,
 				02F87BD61D1CC2D300C65016 /* Assets.xcassets in Resources */,
+				543C4FC52474B9A100821017 /* custom_pin.png in Resources */,
 				02F87BD41D1CC2D300C65016 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
