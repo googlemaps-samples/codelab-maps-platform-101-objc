@@ -31,7 +31,8 @@
 - (void)loadView {
   // Load the map at set latitude/longitude and zoom level
   GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86 longitude:151.20 zoom:12];
-  _mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+  GMSMapID *mapID = [[GMSMapID alloc] initWithIdentifier:@"YOUR_MAP_ID"];
+  _mapView = [GMSMapView mapWithFrame:CGRectZero mapID:mapID camera:camera];
   self.view = _mapView;
   _mapView.delegate = self;
 }

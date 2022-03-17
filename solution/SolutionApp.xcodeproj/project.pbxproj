@@ -16,6 +16,7 @@
 		543C4FC2247352DC00821017 /* LocationGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C4FC0247352DC00821017 /* LocationGenerator.m */; };
 		543C4FC52474B9A100821017 /* custom_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 543C4FC42474B9A100821017 /* custom_pin.png */; };
 		74EB9D117494803A22094E40 /* Pods_SolutionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 800104BEB908541BC0446AB7 /* Pods_SolutionApp.framework */; };
+		AAD9428127E3EE1800E66449 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD9428027E3EE1800E66449 /* Dummy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		543C4FC42474B9A100821017 /* custom_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custom_pin.png; sourceTree = "<group>"; };
 		800104BEB908541BC0446AB7 /* Pods_SolutionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SolutionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AD75AAA52ACDCC2027431F /* Pods-SolutionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SolutionApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SolutionApp/Pods-SolutionApp.release.xcconfig"; sourceTree = "<group>"; };
+		AAD9427F27E3EE1700E66449 /* SolutionApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SolutionApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		AAD9428027E3EE1800E66449 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		B7B1EA515E65F0E0C6E7682E /* Pods-SolutionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SolutionApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SolutionApp/Pods-SolutionApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +85,8 @@
 				02F87BD71D1CC2D300C65016 /* LaunchScreen.storyboard */,
 				02F87BDA1D1CC2D300C65016 /* Info.plist */,
 				02F87BC91D1CC2D300C65016 /* Supporting Files */,
+				AAD9428027E3EE1800E66449 /* Dummy.swift */,
+				AAD9427F27E3EE1700E66449 /* SolutionApp-Bridging-Header.h */,
 			);
 			path = SolutionApp;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 				TargetAttributes = {
 					02F87BC51D1CC2D300C65016 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -226,6 +232,7 @@
 			files = (
 				02F87BD11D1CC2D300C65016 /* ViewController.m in Sources */,
 				02F87BCE1D1CC2D300C65016 /* AppDelegate.m in Sources */,
+				AAD9428127E3EE1800E66449 /* Dummy.swift in Sources */,
 				543C4FC2247352DC00821017 /* LocationGenerator.m in Sources */,
 				02F87BCB1D1CC2D300C65016 /* main.m in Sources */,
 			);
@@ -340,11 +347,16 @@
 			baseConfigurationReference = B7B1EA515E65F0E0C6E7682E /* Pods-SolutionApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SolutionApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.google.codelabs.maps.SolutionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SolutionApp/SolutionApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -353,11 +365,15 @@
 			baseConfigurationReference = A5AD75AAA52ACDCC2027431F /* Pods-SolutionApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SolutionApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.google.codelabs.maps.SolutionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SolutionApp/SolutionApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
